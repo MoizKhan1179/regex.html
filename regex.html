@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LocalStorage</title>
+    <style>
+    #error{
+        color: red;
+    }
+    </style>
+</head>
+<body>
+    <form action="" onkeyup="reg(); return false">
+        <input type="text" id="num">
+        <input type="submit" value="submit">
+
+    </form>
+    <h3 id="error"></h3>
+
+
+
+    <script>
+    function reg(){
+
+        let number= document.getElementById('num').value
+        console.log(number)
+
+        let phone= /^[0-9]{11}$/g
+     
+         if(phone.test(number)){
+             document.getElementById('error').innerHTML=""  
+            }else{
+                document.getElementById('error').innerHTML="kindly Enter valid NUmber"  
+
+        }
+        
+
+
+
+    }
+    
+    
+    </script>
+</body>
+</html>
